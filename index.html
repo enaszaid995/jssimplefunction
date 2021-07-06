@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JS</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5 aside">
+                
+                <div  class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action  hvr-float-shadow" id="list-dark-list" data-toggle="list" href="#list-dark" role="tab" aria-controls="dark" onclick="DarkMode()">
+                    
+                    </a>
+                    <a class="list-group-item list-group-item-action  hvr-float-shadow" id="list-welcome-list" data-toggle="list" href="#list-welcome" role="tab" aria-controls="welcome">Welcome</a>
+                    <a class="list-group-item list-group-item-action hvr-float-shadow" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+                    <a class="list-group-item list-group-item-action hvr-float-shadow" id="list-calclator-list" data-toggle="list" href="#list-calclator" role="tab" aria-controls="calclator">Calculator</a>
+                    <a class="list-group-item list-group-item-action hvr-float-shadow" id="list-averag-list" data-toggle="list" href="#list-averag" role="tab" aria-controls="averag">Average</a>
+                </div>
+                
+            </div>
+            <div class="col-lg-7 centersection">
+            
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="animate__animated animate__heartBeat tab-pane fade show active" id="list-welcome" role="tabpanel" aria-labelledby="list-welcome-list">
+                        <div class="hvr-icon-down">
+                            <i id="icon1" class="fas fa-moon hvr-icon"  onclick="DarkMode()" style="display: inline; padding: 20px 20px 50px 0px; "></i><span id="modee">OFF</span>
+                        </div>
+                        
+                        <h1 class="backInLeft hvr-icon-drop">
+                            WELCOME GUYS <i class="fas fa-fan hvr-icon" style="display: inline; "></i>
+                        </h1>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="card" style="width: 11rem;">
+                                    <img class="card-img-top" height="200px" width="200px" src="images/WhatsApp Image 2021-06-21 at 7.08.51 PM.jpeg" alt="Card image cap">
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="card-title">ENAS ZAID</h3>
+                                        <p class="card-text">FULL STACK DEVELOPER (FRONT AND BACK END WEB DEVELOPMENT).</p>
+                                        <a href="#"class="hvr-shrink" onclick="myFunction()" >DETAILS</a>
+                                       
+                                    </div>
+                                    <ul id="details">
+                                        <li class="animate__animated animate__backInLeft animate__delay-1s"><strong>Name:</strong>Enas N. I. Zaid</li>
+                                        <li class="animate__animated animate__backInLeft animate__delay-2s"><strong>Age:</strong>26</li>
+                                        <li class="animate__animated animate__backInLeft animate__delay-3s"><strong>DOB:</strong>spe , 3 , 1995</li>
+                                        <li class="animate__animated animate__backInLeft animate__delay-4s"><strong>Nationality:</strong>PALESTINIAN</li>
+                                        <li class="animate__animated animate__backInLeft animate__delay-5s"><strong>BIO:</strong>SOFTWARE ENGINEER</li>
+                                        
+                                    </ul>
+                            
+                                </div>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-calclator" role="tabpanel" aria-labelledby="list-calclator-list">
+                        <h1>Calculator</h1>
+                        <form>
+                            <input type="number" id="n1" value="">
+
+                            <input type="number" id="n2" value="">
+                            <br>
+                            <input type="button" onClick="plusBy()" Value="+" />
+                            <input type="button" onClick="minusBy()" Value="-" />
+                            <input type="button" onClick="multiplyBy()" Value="*" />
+                            <input type="button" onClick="divideBy()" Value=" / " />
+                        </form>
+                        <p>The Result is : <br>
+                            <span id = "result"></span>
+                            </p>
+                    </div>
+                    <div class="tab-pane fade" id="list-averag" role="tabpanel" aria-labelledby="list-averag-list">
+                        <h1>Enter Your Number</h1>
+                        <form>
+                            <input type="number" id="n" value="">
+                            <input type="number" id="nn" value="">
+                            <input type="number" id="nnn" value="">
+                            <input type="number" id="nnnn" value="">
+                            <input type="number" id="nnnnn" value="">
+                            <br>
+                            <input type="button" onClick="addArray()" Value="ADD TO ARRAY" />
+                            <input type="button" onClick="averageBy()" Value="AVERAGE" />
+                            <input type="button" onClick="resetBy()" Value="RESET" />
+                        </form>
+                        <p>The Array is : <br>
+                            <span id = "arrayy"></span>
+                            </p>
+                        <p>The Result is : <br>
+                            <span id = "resultt"></span>
+                            </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
